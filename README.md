@@ -15,10 +15,9 @@ Nhóm dự đoán lượng mưa 3h tới với đầu vào là lượng mưa 6h 
   - `handle-missing-value-kriging-impute`: xử lý dữ liệu AWS bị thiếu bằng phương pháp Kriging
   - `clustering-input-data`: phân cụm dữ liệu đầu vào cho việc thử nghiệm cải tiến mô hình sau này
 - Folder `Models`: gồm các notebook cho việc train model
-  - Subfolder `ML`: gồm các mô hình machine learning là `RandomForest` và `XGBoost`. Do trong cài đặt hồi quy chỉ có thể có 1 đầu ra nên nhóm sử dụng wrapper `MultiOutputRegressor` bao ngoài 2 mô   
-  hình để phù hợp với bài toán dự đoán
-      - `random-forest` và `xgboost`: các notebook chỉ dự đoán mưa 1 giờ tới
-      - `random-forest_multi-output-regressor` và `xgboost_multi-output-regressor`: các notebook của các model với wrapper `MultiOutputRegressor`
+  - Subfolder `ML`: gồm các mô hình machine learning là `RandomForest` và `XGBoost`. Do trong cài đặt hồi quy chỉ có thể có 1 đầu ra nên nhóm sử dụng wrapper `MultiOutputRegressor` bao ngoài 2 mô  hình để phù hợp với bài toán dự đoán
+      - `random-forest_multi-output-regressor`: mô hình `RandomForest`
+      - `xgboost_multi-output-regressor`: mô hình `XGBoost`
   - Subfolder `DL`: gồm các mô hình deep learning là `LSTM` và `ConvLSTM`, ứng với 2 notebook là `lstm` và `convlstm`
   - Subfolder `DL_Enhanced`: gồm các mô hình deep learning được cải tiến
       - Cải tiến LSTM thành bài toán dự đoán theo dữ liệu đầu vào được phân cụm: `Clustered_LSTM`
