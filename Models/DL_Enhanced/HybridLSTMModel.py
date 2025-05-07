@@ -84,10 +84,7 @@ class HybridRainfallLoss(nn.Module):
         intensity_targets[medium_mask] = 1
         intensity_targets[heavy_mask] = 2
         
-        # Only consider intensity loss for samples where rain exists
         valid_intensity_mask = binary_targets.bool().squeeze()
-        
-        # Calculate losses
         binary_loss = self.binary_loss_fn(rain_logits, binary_targets)
         
         # Only calculate intensity loss on rainy samples (if any exist)
@@ -99,10 +96,6 @@ class HybridRainfallLoss(nn.Module):
         else:
             intensity_loss = torch.tensor(0.0, device=rain_logits.device)
         
-        # For regression, we can either:
-        # 1. Apply regression loss to all samples
-        # 2. Apply regression loss only to rainy samples
-        # Let's use option 2 for better focus on rain prediction
         if valid_intensity_mask.sum() > 0:
             regression_loss = self.regression_loss_fn(
                 regression[valid_intensity_mask], 
@@ -131,16 +124,9 @@ def get_hybrid_predictions(outputs):
     intensity_probs = outputs['intensity_probs']
     regression = outputs['regression']
     
-    # Binary decision: rain or no rain
     is_rain = rain_prob > 0.5
-    
-    # Get the most likely intensity class
     _, intensity_class = torch.max(intensity_probs, dim=1)
-    
-    # Initialize predictions with zeros (no rain)
     final_predictions = torch.zeros_like(regression)
-    
-    # Where rain is predicted, use regression values
     final_predictions[is_rain] = regression[is_rain]
     
     return {
