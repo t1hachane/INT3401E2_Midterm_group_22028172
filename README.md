@@ -24,6 +24,12 @@ Nhóm dự đoán lượng mưa 3h tới với đầu vào là lượng mưa 6h 
       - Cải tiến LSTM thành mô hình 2 bước: `HybridLSTMModel`
 - Folder `Plot_rain`: script vẽ bản đồ mưa từ một output có format cố định.
 
+Link các dataset được tiền xử lý được đặt trên kaggle:
+- Dataset chỉ có AWS: https://www.kaggle.com/datasets/hunggg123/ai-original-data-only-aws/data
+- Dataset có AWS và các ERA5 feature được xử lý missing bằng KNN: https://www.kaggle.com/datasets/hunggg123/ai-dataknnimputedataset-k-fold
+- Dataset có AWS và các ERA5 feature được xử lý missing bằng Kriging: https://www.kaggle.com/datasets/eunjungham/dataset-k-fold
+- Dict lưu số cụm được phân tương ứng với từng điểm: https://www.kaggle.com/datasets/eunjungham/ai-data4clustering-dict/data
+
 Contribution: các thành viên trong nhóm có đóng góp như sau
 - Lê Xuân Hùng:
     - Tìm hiểu các phương pháp impute 
