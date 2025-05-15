@@ -22,7 +22,7 @@ Nhóm dự đoán lượng mưa 3h tới với đầu vào là lượng mưa 6h 
   - Subfolder `DL_Enhanced`: gồm các mô hình deep learning được cải tiến
       - Cải tiến LSTM thành bài toán dự đoán theo dữ liệu đầu vào được phân cụm: `Clustered_LSTM`
       - Cải tiến LSTM thành mô hình 2 bước: `HybridLSTMModel`
-- Script để vẽ bản đồ mưa từ checkpoint `plot_rainmap`: các mô hình sau khi train đều được lưu checkpoint và sau này có thể load lại để vẽ bản đồ mưa.
+- Folder `Plot_rain`: script vẽ bản đồ mưa từ một output có format cố định.
 
 Contribution: các thành viên trong nhóm có đóng góp như sau
 - Lê Xuân Hùng:
