@@ -1,6 +1,6 @@
 # INT3401E2_Midterm_group_22028172
 
-Đây là repo của bài tập lớn giữa kì Dự báo lượng mưa của lớp Trí tuệ nhân tạo INT3401E2. Báo cáo của nhóm có thể tìm thấy tại: Nhóm gồm những thành viên như sau: 
+Đây là repo của bài tập lớn giữa kì Dự báo lượng mưa của lớp Trí tuệ nhân tạo INT3401E2. Báo cáo của nhóm có thể tìm thấy tại: https://drive.google.com/file/d/1r7KZrQ73_2dzyn5Dw8MtALSJDeWCpgVa/view?usp=sharing. Nhóm gồm những thành viên như sau: 
 - Lê Xuân Hùng - MSV: 22028172 (nhóm trưởng)
 - Tăng Vĩnh Hà - MSV: 22028129
 - Ngô Tùng Lâm - MSV: 22028092
